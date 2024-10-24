@@ -1,0 +1,81 @@
+
+{
+"projects": [
+      {
+        "id": "1",
+        "slug":"ad-market-place",
+        "title": "Ad MarketPlace with NextJS and tailwind ",
+        "techs": "NextJS, TailwindCSS",
+        "description": "Automated various tasks using django, celery and redis. User. Automated various tasks using django",
+		    "link": " https://github.com/Siddharthbadal/Job-Board",
+        "live":"https://github.com/Siddharthbadal/Job-Board"
+                            
+      },
+      {
+        "id": "2",
+        "slug":"tasks-toolkit",
+        "title": "Tasks Toolkit with Django and celery ",
+        "techs": "Django, Celery",
+        "description": "Send bulk emails, export import data and image compression with ",        
+		    "link": "  https://github.com/Siddharthbadal/djangoAutomationToolkit",
+         "live":"https://github.com/Siddharthbadal/Job-Board"        
+        
+      },
+      {
+        "id": "3",
+        "slug":"games-club",
+        "title": "Games Club with ReactJs and TailwindCSS",
+        "techs": "ReactJs, TailwindCSS",
+        "description": "App with filters, search in ReactJs and TailwindCSS. App with filters, search in ReactJs and TailwindCSS",        
+		    "link": " https://github.com/Siddharthbadal/gamesclub",
+         "live":"https://github.com/Siddharthbadal/Job-Board"         
+        
+      },
+
+      {
+        "id": "4",
+        "slug":"rest-api",
+        "title": "RestAPI with Django Rest Framework ",
+        "techs": "Django, Django Rest Framework",
+        "description": "rest api for a ecommerce with django ",        
+		    "link": "https://github.com/Siddharthbadal/EShop-API",
+         "live":"https://github.com/Siddharthbadal/Job-Board"        
+        
+      },
+      {
+        "id": "5",
+        "slug":"social-media-platform",
+        "title": "Social Media Platform with Django ",
+        "techs": "Django, javaScript",
+        "description": " for stuents with groups and chat rooms in ",        
+		    "link": "  https://github.com/Siddharthbadal/DConnect-Social",
+         "live":"https://github.com/Siddharthbadal/Job-Board"            
+        
+      },
+      
+      {
+        "id": "6",
+        "slug":"python-cli-app",
+        "title": "CLI App with Python and MySQL",
+        "techs": "Python, MySQL",
+        "description": "for a registrar with database and crud with ",        
+		    "link": "https://github.com/Siddharthbadal/Course-Registrar",
+         "live":"https://github.com/Siddharthbadal/Job-Board"
+             
+        
+      },
+      
+      
+      {
+        "id": "7",
+        "slug":"sql-data-analysis",
+        "title": "Database Development and Data Analysis with SQL",
+        "techs": "SQL, Python",
+        "description": "case studies with database development using ",        
+		    "link": " https://github.com/Siddharthbadal/SQL-Case-Studies-Data-Analysis",
+         "live":"https://github.com/Siddharthbadal/Job-Board"             
+        
+      }
+      
+    ]
+}
