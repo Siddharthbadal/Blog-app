@@ -59,7 +59,7 @@ export default async function Page({ params }:{params: {slug: string}}) {
                           : ''}
                         </div>
                         
-                        {/* <Link href={`${project.slug}/edit-project/`} key={project.id}>Edit</Link> */}
+                        
                   </div>
 
                       
