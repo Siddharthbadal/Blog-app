@@ -15,10 +15,10 @@ export default async function Projects() {
 
     return (                         
 
-      <main className="text-center  px-5">
+      <main className="text-center px-5">
         <h1 className="text-gray-700 text-2xl font-semibold mt-6">Projects</h1>
         
-      <div className="mt-6 text-2xl">
+      <div className="mt-2 ">
           <Suspense fallback={<Loader  />}>
               <ProjectsList />
           </Suspense>

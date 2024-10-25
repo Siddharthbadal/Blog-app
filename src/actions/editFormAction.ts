@@ -5,13 +5,13 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 
-export default async function addProjectForm(formData: FormData) {
+export async function editProjectForm(formData: FormData, id:string) {
     // auth check
     const { isAuthenticated } = getKindeServerSession()
     if(!(await isAuthenticated())){
         redirect("/api/auth/login")
     }
-
+    
     const title =formData.get("title") as string
     const slug =(formData.get("slug") as string).replace(/\s+/g,"-").toLowerCase()
     const short =formData.get("short") as string
@@ -21,7 +21,8 @@ export default async function addProjectForm(formData: FormData) {
     const demolink =formData.get("demolink") as string
     const description =formData.get("description") as string
         
-    await prisma.project.create({
+    await prisma.project.updateMany({
+        where: { id },
         data: {
             title,
             slug,
@@ -36,5 +37,3 @@ export default async function addProjectForm(formData: FormData) {
 
     revalidatePath("/projects")
 }
-
-

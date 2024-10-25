@@ -17,8 +17,9 @@ datasource db {
 }
 
 model Project {
-  id  Int  @id @default(autoincrement())
+  id  String  @id @default(cuid())
   title String
+  slug  String @unique 
   short String 
   description String
   techs String
