@@ -54,7 +54,7 @@ export const getOneProject = async ({ params }:{params: {slug: string}}) =>{
       
 }
 
-export const deleteProject = async (formData)=>{
+export const deleteProject = async (formData: FormData)=>{
 
     const { isAuthenticated } = getKindeServerSession()
     if(!(await isAuthenticated())){
