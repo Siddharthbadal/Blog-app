@@ -60,7 +60,7 @@ export const deleteProject = async (formData: FormData)=>{
     if(!(await isAuthenticated())){
         redirect("/projects")
     }
-    const id = formData.get('id')
+    const id:any = formData.get('id')
     await prisma.project.delete({
         where:{
             id
