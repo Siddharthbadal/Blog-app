@@ -1,5 +1,4 @@
 
-import { getOneProject } from "@/actions/addFormActions";
 import DeleteProject from "@/components/DeleteProject";
 
 import Image from "next/image";
@@ -10,10 +9,10 @@ import { notFound } from "next/navigation";
 
 export default async function Page({ params }:{params: {slug: string}}) {
    
-    // const response = await fetch(`http://localhost:3030/projects/${params.id}`);
-    // const project = await response.json();    
+    const response = await fetch(`http://localhost:3030/projects/${params.id}`);
+    const project = await response.json();    
 
-    const project = await getOneProject(slug)
+    
     if (!project){
         notFound();
     }
