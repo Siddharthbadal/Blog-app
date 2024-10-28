@@ -65,9 +65,9 @@ export const deleteProject = async (formData)=>{
         where:{
             id
         }
-    });
-    redirect("/projects")
+    });    
     revalidatePath("/projects");   
+    redirect("/projects")
 }
 
 

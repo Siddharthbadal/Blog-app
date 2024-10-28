@@ -8,8 +8,7 @@ import { notFound } from "next/navigation";
 
 
 
-
-export default async function Page(slug: string) {
+export default async function Page({ params }:{params: {slug: string}}) {
    
     // const response = await fetch(`http://localhost:3030/projects/${params.id}`);
     // const project = await response.json();    
