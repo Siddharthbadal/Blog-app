@@ -1,36 +1,36 @@
 
+import { deleteProject, getOneProject } from "@/actions/addFormActions";
+import DeleteProject from "@/components/DeleteProject";
 import prisma from "@/lib/db";
 import Image from "next/image";
 import Link from "next/link"
 import { notFound } from "next/navigation";
+import toast from "react-hot-toast";
 
 
 
-export default async function Page({ params }:{params: {slug: string}}) {
+
+export default async function Page(slug: string) {
    
     // const response = await fetch(`http://localhost:3030/projects/${params.id}`);
     // const project = await response.json();    
 
-    const project = await prisma.project.findUnique({
-      where: {
-        slug: params.slug,
-      },
-      
-    });
+    const project = await getOneProject(slug)
     if (!project){
         notFound();
     }
-    
+
   return (
     
     <main className="max-w-[1080px] mx-auto px-7 pt-4 lg:pt-16 text-center">
            {                            
-              <div className="flex flex-col lg:flex-row gap-8 lg:gap-8">
+              <div className="flex flex-col lg:flex-row gap-8 lg:gap-8">                                                        
                 <Image src={project.imagelink} alt={project.title}
                 className="w-[580px] lg:max-w-[520px] h-[240px] rounded-lg object-contain  shadow-lg shadow-gray-200"
-                  width={520}
-                  height={180}
+                width={520}
+                height={180}
                 />
+                
                 
                   <div>
                   <h2 className="text-2xl font-semibold capitalize">{project.title}</h2>
@@ -58,21 +58,19 @@ export default async function Page({ params }:{params: {slug: string}}) {
                           </Link>
                           : ''}
                         </div>
-                        
-                        
-                  </div>
-
-                      
-                    
-                    
-                    
+             
+                                                
                   
+                  </div>                                                                                                  
                   <hr />
+                  
+                  <DeleteProject id={project.id} />  
+                  
               </div>                                    
 
            } 
-
-        
+            
+              
     </main>
   )
 }

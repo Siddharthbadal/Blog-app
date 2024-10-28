@@ -1,6 +1,7 @@
+import { getAllProjects } from "@/actions/addFormActions";
 import prisma from "@/lib/db";
 import Link from "next/link";
-
+import DeleteProject from "./DeleteProject";
 
 
 export default async function ProjectsList() {
@@ -9,14 +10,12 @@ export default async function ProjectsList() {
     // const data = await response.json();
     // const projects = await prisma.project.findMany
 
-    const projects = await prisma.project.findMany({
-      
-      orderBy:{
-        updatedAt: "desc"
-      },
-      
-      
-    })
+    // const projects = await prisma.project.findMany({      
+    //   orderBy:{
+    //     updatedAt: "desc"
+    //   },            
+    // })
+    const projects = await getAllProjects()
     // const projects = await prisma.project.findMany({
     //   where:{
     //     description:{
@@ -43,7 +42,8 @@ export default async function ProjectsList() {
                       {project.short}
                       
                         </small>
-                </Link>                        
+                </Link>   
+                                     
             </div>            
             ))
           }

@@ -2,7 +2,7 @@
 import Loader from "@/components/Loader";
 import ProjectsList from "@/components/Projects-List";
 import Link from "next/link";
-import { Key, ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode, Suspense } from "react";
+import {  Suspense } from "react";
 
 export const metadata = {
   title: "Projects | Siddharth",

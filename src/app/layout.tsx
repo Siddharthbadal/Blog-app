@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -37,6 +38,7 @@ export default function RootLayout({
         <Container>
             <Header />
                 {children}
+                <Toaster position="top-right" />
             <Footer />
         </Container>
 
