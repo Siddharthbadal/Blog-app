@@ -1,7 +1,7 @@
 
 import { deleteProject, getOneProject } from "@/actions/addFormActions";
 import DeleteProject from "@/components/DeleteProject";
-import prisma from "@/lib/db";
+
 import Image from "next/image";
 import Link from "next/link"
 import { notFound } from "next/navigation";
