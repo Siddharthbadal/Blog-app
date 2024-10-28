@@ -1,5 +1,4 @@
 
-import DeleteProject from "@/components/DeleteProject";
 
 import Image from "next/image";
 import Link from "next/link"
@@ -61,7 +60,7 @@ export default async function Page({ params }:{params: {slug: string}}) {
                   </div>                                                                                                  
                   <hr />
                   
-                  <DeleteProject id={project.id} />  
+                  
                   
               </div>                                    
 
