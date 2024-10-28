@@ -5,7 +5,6 @@ import DeleteProject from "@/components/DeleteProject";
 import Image from "next/image";
 import Link from "next/link"
 import { notFound } from "next/navigation";
-import toast from "react-hot-toast";
 
 
 
