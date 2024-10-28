@@ -1,5 +1,5 @@
 
-import { deleteProject, getOneProject } from "@/actions/addFormActions";
+import { getOneProject } from "@/actions/addFormActions";
 import DeleteProject from "@/components/DeleteProject";
 
 import Image from "next/image";
