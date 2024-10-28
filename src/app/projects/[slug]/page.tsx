@@ -1,18 +1,22 @@
 
 
+import prisma from "@/lib/db";
 import Image from "next/image";
 import Link from "next/link"
 import { notFound } from "next/navigation";
-  
+
 
 
 export default async function Page({ params }:{params: {slug: string}}) {
    
-    const response = await fetch(`http://localhost:3030/projects/${params.slug}`);
-    const project = await response.json();    
+    // const response = await fetch(`http://localhost:3030/projects/${params.slug}`);
+    // const project = await response.json();    
 
-    
-    if (!project){
+    const project =await prisma.project.findUnique({
+      where: {
+        slug: params.slug,
+      }})
+    if(!project){
         notFound();
     }
 

@@ -11,7 +11,7 @@ export default async function ProjectsList() {
 
     const projects = await prisma.project.findMany({      
       orderBy:{
-        updatedAt: "desc"
+        createdAt: "desc"
       },            
     })
     // const projects = await getAllProjects()
