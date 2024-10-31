@@ -78,7 +78,7 @@ export default function ProjectForm() {
 <input 
         type="text" 
         name="techs"
-        placeholder="techs"
+        placeholder="techs with space"
         className="border border-gray-500 rounded p-2 h-full w-1/2"
         required
     />

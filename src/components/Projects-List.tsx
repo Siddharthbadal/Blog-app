@@ -7,14 +7,14 @@ export default async function ProjectsList() {
     await new Promise((resolve) => setTimeout(resolve, 1000))
     // const response = await fetch("http://localhost:3030/projects")
     // const data = await response.json();
-    // const projects = await prisma.project.findMany
+   
 
     const projects = await prisma.project.findMany({      
       orderBy:{
         createdAt: "desc"
       },            
     })
-    // const projects = await getAllProjects()
+  
     // const projects = await prisma.project.findMany({
     //   where:{
     //     description:{
@@ -32,12 +32,13 @@ export default async function ProjectsList() {
         {
           projects.map((project) => (
             
-            <div className="lg:w-1/4 py-2 px-4 bg-white rounded-lg shadow-lg shadow-gray-300  ">
+            <div className="lg:w-1/4 py-2 px-4 bg-white rounded-lg 
+                  shadow-lg shadow-gray-200  hover:shadow-gray-300">
                 <Link key={project.id} href={`/projects/${project.slug}`} className="">
                     <h5 className="mb-2 lg:text-md tracking-wide text-gray-600 font-semibold hover:text-gray-800">
                       {project.title}                                           
                     </h5>
-                    <small className="text-sm tracking-wide text-gray-600  whitespace-break-spaces">
+                    <small className="text-sm tracking-wide text-gray-600  whitespace-break-spaces hover:text-gray-800 ">
                       {project.short}
                       
                         </small>

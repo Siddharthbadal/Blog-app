@@ -34,6 +34,7 @@ export default function Header(){
                 className="w-[45px] h-[45px] rounded-lg"
                 width={45}
                 height={45}
+                priority={false}
             />
             </Link>
 
