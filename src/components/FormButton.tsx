@@ -9,8 +9,14 @@ export default function FormButton() {
     },1500)
         
   return (
-    <button className="bg-gray-600 text-white/50 h-full w-1/2 ml-2 rounded-lg p-2 font-semibold" >
-                {pending ? "Adding project.." : "Submit"}
+    <button className="bg-gray-600 text-xl text-white/50 h-full w-1/2 mt-1 rounded-lg p-2 font-semibold" disabled={pending}>
+                {pending ? 
+                    "Sending..." 
+                
+                :                 
+                    "Submit"
+                  
+                }
     </button>
   )
 }
