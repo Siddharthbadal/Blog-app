@@ -3,12 +3,13 @@ import Link from "next/link";
 
 
 
-export default async function ProjectsList() {
+export default async function PostsList() {
     await new Promise((resolve) => setTimeout(resolve, 1000))
-    // const response = await fetch("http://localhost:3030/projects")
-    // const data = await response.json();
+    // const response = await fetch("projects")
    
-
+    // const projects = await response.json();
+    
+  
     const projects = await prisma.project.findMany({      
       orderBy:{
         createdAt: "desc"
@@ -34,7 +35,7 @@ export default async function ProjectsList() {
             
             <div className="lg:w-1/4 py-2 px-4 bg-white rounded-lg 
                   shadow-lg shadow-gray-200  hover:shadow-gray-300">
-                <Link key={project.id} href={`/projects/${project.slug}`} className="">
+                <Link key={project.id} href={`/posts/${project.slug}`} className="">
                     <h5 className="mb-2 lg:text-md tracking-wide text-gray-600 font-semibold hover:text-gray-800">
                       {project.title}                                           
                     </h5>

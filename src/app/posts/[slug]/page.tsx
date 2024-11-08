@@ -7,9 +7,10 @@ import { notFound } from "next/navigation";
 
 
 
+
 export default async function Page({ params }:{params: {slug: string}}) {
    
-    // const response = await fetch(`http://localhost:3030/projects/${params.slug}`);
+    // const response = await fetch(`http://localhost:3030/projects/${params.id}`);
     // const project = await response.json();    
 
     const project =await prisma.project.findUnique({
@@ -39,13 +40,14 @@ export default async function Page({ params }:{params: {slug: string}}) {
                     
                   </p>
                   <div className="mt-4 mb-4 text-left ml-5">
-                      <h5 className="font-semibold">Tech Stack:</h5>
-                        <ul>
+                      
+                        
                           {
-                              project.techs.split(" ").map(tech => <li>&bull; {tech}</li>)
+                              project.techs.split(" ").map(tech =>  <span className="font-semibold"> { tech }</span>
+                              )
                           }
                           
-                        </ul>
+                        
                   </div>
                   <p className="mt-2 mb-2 leading-6 tracking-wider whitespace-pre-wrap ">
                     {project.description}

@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 
+
 const navLinks = [
     {
         href: "/",
@@ -8,15 +9,20 @@ const navLinks = [
     },
     {
         href: "/projects",
-        label: "Projects"
+        label: "Posts"
     },
     {
         href: "/contact",
         label: "Contact"
-    }
+    },
+    // {
+    //     href: "/tags",
+    //     label: "Tags"
+    // }
 ]
 
-export default function Footer(){
+export default async function Footer(){
+    
     return (
         <footer className="mt-auto text-center py-2 px-7 shadow-inner">
                         
@@ -35,8 +41,15 @@ export default function Footer(){
 
                 </ul>
             </nav>
-            <p className="text-sm text-gray-700">&copy; {`${new Date().getFullYear()}`}
-            </p>
+            
+            <div className=" text-gray-600 text-md font-semibold tracking-wider mb-2">
+            <span className="text-sm text-gray-500">&copy; {`${new Date().getFullYear()}`}
+            </span>
+               
+               
+                 {/* <LogoutLink> LogOut</LogoutLink>  */}
+
+        </div>
         </footer>
     )
 }

@@ -1,6 +1,6 @@
 import addProjectForm from "@/actions/addFormActions";
 import FormButton from "@/components/FormButton";
-import ProjectForm from "@/components/ProjectForm";
+import ProjectForm from "@/components/PostForm";
 
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/server";
@@ -17,7 +17,7 @@ export default async function page() {
     
   return (
     <main className="text-center pt-10">
-        <h1 className="text-2xl text-gray-600 font-semibold mb-3 ">Add Project</h1>
+        <h1 className="text-2xl text-gray-600 font-semibold mb-3 ">Add Post</h1>
         
        <ProjectForm />
         

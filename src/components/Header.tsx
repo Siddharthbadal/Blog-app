@@ -7,16 +7,16 @@ import { usePathname } from "next/navigation"
 
 const navLinks = [
     {
-        href: "/add-project",
-        label:"Add"
+        href: "/add-post",
+        label:"Add Post"
     },
     {
         href: "/",
         label: "Home"
     },
     {
-        href: "/projects",
-        label: "Projects"
+        href: "/posts",
+        label: "Posts"
     }
     
 ]
@@ -39,7 +39,7 @@ export default function Header(){
             </Link>
 
             <nav>
-                <ul className="flex gap-x-5 text-xl [&>*:first-child]:hidden ">
+                <ul className="flex gap-x-5 text-xl  ">
                     {navLinks.map((link)=>(
                         <li key={link.href}>
                 <Link 
@@ -57,6 +57,8 @@ export default function Header(){
 
                 </ul>
             </nav>
+
+            
         </header>
     )
 }
