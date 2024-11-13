@@ -12,7 +12,7 @@ export default async function page() {
     await new Promise((resolve) => setTimeout(resolve, 1000))
     const { isAuthenticated } = getKindeServerSession();
     if (!(await isAuthenticated())){
-        redirect("/api/auth/login?post_login_redirect_url=/add-project")
+        redirect("/api/auth/login?post_login_redirect_url=/add-post")
     }
     
   return (

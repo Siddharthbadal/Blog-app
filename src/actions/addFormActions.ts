@@ -32,7 +32,7 @@ export default async function addProjectForm(newProject: unknown) {
         data: result.data
                    
     });     
-        revalidatePath("/projects");            
+        revalidatePath("/posts");            
     }
 
 
@@ -58,7 +58,7 @@ export const deleteProject = async (formData: FormData)=>{
 
     const { isAuthenticated } = getKindeServerSession()
     if(!(await isAuthenticated())){
-        redirect("/projects")
+        redirect("/posts")
     }
     const id:any = formData.get('id')
     await prisma.project.delete({
@@ -66,8 +66,8 @@ export const deleteProject = async (formData: FormData)=>{
             id
         }
     });    
-    revalidatePath("/projects");   
-    redirect("/projects")
+    revalidatePath("/posts");   
+    redirect("/posts")
 }
 
 
